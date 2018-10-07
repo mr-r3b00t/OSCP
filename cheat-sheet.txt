@@ -76,3 +76,14 @@ mkdir /pentest
 mkdir /pentest/tools
 mkdir /pentest/oscp
 mkdir /pentest/htb
+
+#####################################
+# Web Application Enumeration Tools
+#####################################
+# run wafw00f to start with to check for application firewalls
+# CMSMAP for scanning content management systems
+# nikto for web application vulnerability scanning
+# wpscan for wordpress
+# joomscan for joomla
+
+
