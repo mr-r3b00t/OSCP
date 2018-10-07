@@ -8,14 +8,20 @@ apt-get update; apt-get upgrade
 
 ##############################
 # Update Python
-
+##############################
 apt-get install python-dev
+apt-get instal python-pip
+apt-get install python2.7-dev
+apt-get install python2.7-pip
+apt-get install python3-dev
+apt-get install python3-pip
 
 ####################
 #Terminal Management
 ####################
-#User terminator
+#User terminator and or TMUX
 apt-get install terminator
+apt-get install tmux
 
 ###############
 # SETUP MSF
@@ -30,3 +36,11 @@ set GLPORT 4444
 #SIMPLE PYTHON WEB SERVER
 ########################
 python -m SimpleHTTPServer 80
+
+#####################################
+# Get all the tools into /pentest
+#####################################
+mkdir /pentest
+mkdir /pentest/tools
+mkdir /pentest/oscp
+mkdir /pentest/htb
