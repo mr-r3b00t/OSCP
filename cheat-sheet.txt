@@ -108,4 +108,7 @@ snmpwalk -v 1 -c public [target ip]
 # wpscan for wordpress
 # joomscan for joomla
 
+#curl the robots.txt file
+curl http://[target_ip]/robots.txt
+
 
