@@ -44,9 +44,12 @@ apt-get install python3-pip
 ####################
 #Terminal Management
 ####################
-#User terminator and or TMUX
+#User terminator, Byobu.co and or TMUX
+
 apt-get install terminator
 apt-get install tmux
+	apt-get install byobu
+
 
 ###############
 # SETUP MSF
