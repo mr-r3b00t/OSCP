@@ -118,4 +118,10 @@ mkdir /pentest/tools
 cd /pentest/tools
 git clone https://github.com/OJ/gobuster.git
 
+#######################
+### WEB SHELLS ########
+#######################
+#PHP BASH
+https://github.com/Arrexel/phpbash
+
 
