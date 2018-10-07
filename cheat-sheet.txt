@@ -111,4 +111,11 @@ snmpwalk -v 1 -c public [target ip]
 #curl the robots.txt file
 curl http://[target_ip]/robots.txt
 
+#forced browsing
+#gobuster
+mkdir /pentest/
+mkdir /pentest/tools
+cd /pentest/tools
+git clone https://github.com/OJ/gobuster.git
+
 
