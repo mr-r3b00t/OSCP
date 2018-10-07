@@ -23,6 +23,13 @@
 ################
 apt-get update; apt-get upgrade
 
+##################################################
+# SETUP VM TOOLS FOR SHARED FOLDERS AND COPY PASTA
+##################################################
+
+apt-get install openvmfstools
+There are shell scripts to run to enable this
+
 ##############################
 # Update Python
 ##############################
@@ -45,6 +52,14 @@ apt-get install tmux
 ###############
 #setup postgreSQL to start by default
 #rebuild search cache
+msfdb init
+msfdb status
+msfconsole
+db_status
+db_connect msf:msf@127.0.0.1:5432/msf
+db_rebuild_cache
+db_status
+
 #setup global variables in MSF
 set GLHOST 10.10.10.10
 set GLPORT 4444
