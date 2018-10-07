@@ -156,5 +156,9 @@ whoami
 hostname
 #now let's see what OS version I'm running
 uname -a # -a is important to get all
+#now let's see what access i have
+#######
 
+#now let's see if I can run anything with elevated access
+sudo -l
 
