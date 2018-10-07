@@ -1,0 +1,27 @@
+#OSCP Cheat Sheet by Dan Card
+#Kali Setup
+
+####################
+# UPDATE KALI
+################
+apt-get update; apt-get upgrade
+
+##############################
+# Update Python
+
+apt-get install python-dev
+
+####################
+#Terminal Management
+####################
+#User terminator
+apt-get install terminator
+
+###############
+# SETUP MSF
+###############
+#setup postgreSQL to start by default
+#rebuild serach cache
+#setup gloval variables in MSF
+set GLHOST 10.10.10.10
+set GLPORT 4444
