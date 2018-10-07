@@ -111,12 +111,17 @@ snmpwalk -v 1 -c public [target ip]
 #curl the robots.txt file
 curl http://[target_ip]/robots.txt
 
+
 #forced browsing
 #gobuster
+#install
 mkdir /pentest/
 mkdir /pentest/tools
 cd /pentest/tools
 git clone https://github.com/OJ/gobuster.git
+
+###########################WORDPRESS SCANNING#######################################
+wpscan --url http://[target_ip] --enumerate p --enumerate u --enumerate t
 
 #######################
 ### WEB SHELLS ########
@@ -141,3 +146,15 @@ nc -v -n -l -p 1234
 
 ### an msf listener
 msfconsole
+
+
+###################LINUX ENUMERATION#################################
+#ok so ideally use a tool such as linenum.sh however we need to know what to do manualy.
+#so first thing is first let's see who I am?
+whoami
+#now let's check my hostname
+hostname
+#now let's see what OS version I'm running
+uname -a # -a is important to get all
+
+
