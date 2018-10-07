@@ -11,6 +11,7 @@
  \__|_|   \__, |  |_| |_|\__,_|_|  \__,_|\___|_|   
           |___/                                    
 
+#remmeber most of these need root but I've not included SUDO because Kali doesn't feature this :)
 
 ##############################
 #OSCP Cheat Sheet by Dan Card#
@@ -51,6 +52,7 @@ apt-get install tmux
 # SETUP MSF
 ###############
 #setup postgreSQL to start by default
+update-rc.d postgresql enable
 #rebuild search cache
 msfdb init
 msfdb status
