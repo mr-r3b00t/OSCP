@@ -79,6 +79,26 @@ mkdir /pentest/tools
 mkdir /pentest/oscp
 mkdir /pentest/htb
 
+####################################
+# ENUMERATION
+#####################################
+###find ip and arpy things
+netdiscover -i eth0
+#add things to host files if that's appropriate
+
+#NMAP ALL THE THINGS
+
+nmap -pN -sS -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpq] [targetIP/name]
+nmap -pN -sU -sV -T4 -O -A -oA -v -v -v -v [targetname_udpq] [targetIP/name]
+nmap -pN -p- -sS -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpf] [targetIP/name]
+nmap -pN -p- -sU -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpf] [targetIP/name]
+
+#check for SNMP
+### check snmp public community string with version 1 (change as requred)
+snmp-check [target_ip] -c public -v 1
+#########if found walk it#############
+snmpwalk -v 1 -c public [target ip]
+
 #####################################
 # Web Application Enumeration Tools
 #####################################
