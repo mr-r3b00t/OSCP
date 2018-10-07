@@ -122,6 +122,8 @@ git clone https://github.com/OJ/gobuster.git
 ### WEB SHELLS ########
 #######################
 #PHP BASH
-https://github.com/Arrexel/phpbash
+cd /pentest/tools
+#https://github.com/Arrexel/phpbash
+git clone https://github.com/Arrexel/phpbash.git
 
 
