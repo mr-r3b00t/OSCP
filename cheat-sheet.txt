@@ -179,6 +179,21 @@ sudo -l
 #rasta mouse has some scripts Sherlock and Watston (watson runs on .net 2.0) for searching for exploits for priv esc
 https://github.com/rasta-mouse/Watson
 
+###############################################
+######### POWER SHELL TO THE RESCUE ###########
+###############################################
+#PowerShell One Liners
+#run a local script file
+PowerShell.exe -ExecutionPolicy UnRestricted -File .runme.ps1
+#run a command block
+PowerShell.exe -ExecutionPolicy UnRestricted invoke-command -scriptblock {Write-Host "Now I have a machine gun"}
+
+#POST EXPLOITATION LIVING OFF THE LAND
+hostname
+whoami
+ipconfig /all
+
+
 
 ######### LINUX POST EXPLOITATION ##############
 # on linux and unix systems BASH shell scripts can be useful after an initial shell has been achieved
