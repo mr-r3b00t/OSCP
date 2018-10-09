@@ -172,3 +172,18 @@ uname -a # -a is important to get all
 #now let's see if I can run anything with elevated access
 sudo -l
 
+
+
+
+#######################################################################################
+#######################################################################################
+################################## CRACKING ###########################################
+
+#Crack a zip file using john (you may need to install jumbo version of john and use the exact path to run the john binary
+# you need a word list either use rockyou or generate one using data you have (e.g. run strings, or ur cewl against a website etc.)
+#first convert the zip file to john the ripper hash format using zip2john (use rar2john for rar files)
+zip2john control.zip > ziphash
+#next we need to run john and specify the format and the hash file and provide a wordlist
+john --format=zip --wordlist=passwords.txt ziphash
+
+
