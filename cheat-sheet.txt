@@ -172,8 +172,17 @@ uname -a # -a is important to get all
 #now let's see if I can run anything with elevated access
 sudo -l
 
+#######################################################################################
+########################## POST EXPLOITATION ##########################################
+#######################################################################################
+#########WINDOWS POST EXPLOITATION##############
+#rasta mouse has some scripts Sherlock and Watston (watson runs on .net 2.0) for searching for exploits for priv esc
+https://github.com/rasta-mouse/Watson
 
 
+######### LINUX POST EXPLOITATION ##############
+# on linux and unix systems BASH shell scripts can be useful after an initial shell has been achieved
+LinEnum.sh
 
 #######################################################################################
 #######################################################################################
