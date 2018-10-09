@@ -189,9 +189,19 @@ PowerShell.exe -ExecutionPolicy UnRestricted -File .runme.ps1
 PowerShell.exe -ExecutionPolicy UnRestricted invoke-command -scriptblock {Write-Host "Now I have a machine gun"}
 
 #POST EXPLOITATION LIVING OFF THE LAND
+#so go find useful system information
 hostname
 whoami
 ipconfig /all
+route print
+sytseminfo
+qwinsta
+schtasks
+at
+
+#--------------------look for credentials
+cmdkey /list
+
 
 
 
