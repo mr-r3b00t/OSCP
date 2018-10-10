@@ -102,6 +102,9 @@ snmp-check [target_ip] -c public -v 1
 #########if found walk it#############
 snmpwalk -v 1 -c public [target ip]
 
+#CHECK for TFTP (ala stuxnet)
+nmap -sU -p 69 --script tftp-enum.nse [taretIP/name]
+
 #####################################
 # Web Application Enumeration Tools
 #####################################
