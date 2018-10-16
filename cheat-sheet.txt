@@ -177,6 +177,13 @@ whoami
 hostname
 #now let's see what OS version I'm running
 uname -a # -a is important to get all
+##################
+cat /etc/os-release
+lsb_release -a
+hostnamectl
+
+uname -r #kernel version
+
 #now let's see what access i have
 #######
 
