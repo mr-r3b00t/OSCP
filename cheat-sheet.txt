@@ -208,6 +208,8 @@ PowerShell.exe -ExecutionPolicy UnRestricted invoke-command -scriptblock {Write-
 
 #POST EXPLOITATION LIVING OFF THE LAND
 #so go find useful system information
+# check this link out --- https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line/
+
 hostname
 whoami
 ipconfig /all
@@ -241,6 +243,20 @@ chmod +x LinEnum.sh
 
 #https://github.com/belane/linux-soft-exploit-suggester
 #https://github.com/mzet-/linux-exploit-suggester
+
+
+
+###################### KERNEL EXPLOITS ################################
+#Look at the suggested exploits in relation to kernerl exploits
+#kernel exploits often require to be compiled
+#if you can't compile on the victim compile them locally using gcc
+# if you want to compile a 32 bit binary on x64 kali using "gcc -m 32"
+
+# Linux Kernel 2.6 (Debian 4.0 / Ubuntu / Gentoo) UDEV < 1.4.1 - Local Privilege Escalation (1)
+# https://www.exploit-db.com/exploits/8478/
+# DIRTYC0W
+# NELSON
+
 
 #######################################################################################
 #######################################################################################
