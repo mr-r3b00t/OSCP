@@ -48,8 +48,16 @@ apt-get install python2.7-pip
 apt-get install python3-dev
 apt-get install python3-pip
 
+
+#######################
+#Install PIP modules
+#######################
+
+pip install netifaces
+
 ####################
 #Terminal Management
+# The PWK image already includes terminator
 ####################
 #User terminator, Byobu.co and or TMUX
 
