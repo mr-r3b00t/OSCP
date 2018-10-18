@@ -106,10 +106,12 @@ netdiscover -i eth0
 
 #NMAP ALL THE THINGS
 
-nmap -pN -sS -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpq] [targetIP/name]
-nmap -pN -sU -sV -T4 -O -A -oA -v -v -v -v [targetname_udpq] [targetIP/name]
-nmap -pN -p- -sS -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpf] [targetIP/name]
-nmap -pN -p- -sU -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpf] [targetIP/name]
+nmap -Pn -sS -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpq] [targetIP/name]
+nmap -Pn -sU -sV -T4 -O -A -oA -v -v -v -v [targetname_udpq] [targetIP/name]
+nmap -Pn -p- -sS -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpf] [targetIP/name]
+nmap -Pn -p- -sU -sV -T4 -O -A -oA -v -v -v -v [targetname_tcpf] [targetIP/name]
+
+nmap -Pn -p- -sV -T4 --script *vuln* 10.11.1.220
 
 #check for SNMP
 ### check snmp public community string with version 1 (change as requred)
