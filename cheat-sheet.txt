@@ -240,6 +240,11 @@ at
 cmdkey /list
 
 
+#######################LINUX Remote Desktop #######################
+#rdesktop has a wide range of options
+#remote desktop with clipboard, screen name SLAVE and use 80% of the screen
+rdesktop -u administrator -p "Pa55w0rd1" -r PRIMARYCLIPBOARD -T SLAVE -g 80% 10.11.1.221
+
 
 
 ######### LINUX POST EXPLOITATION ##############
