@@ -296,5 +296,13 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 %SystemRoot%\SYSTEM32\rundll32.exe dsquery,OpenQueryWindow
 
 
+#ACTIVE DIRECTORY ENUMERATION
+#RPCLIENT with NULL Session bind
 
+#RID ENUMERATION
+# get RID ENUM from trusted SEC - https://github.com/trustedsec/ridenum
+git clone https://github.com/trustedsec/ridenum
+# neeeds python-pexpect
+#may needs creds is NULL sessions isn't enabled
+python ridenum.py 10.11.1.220 500 50000
 
