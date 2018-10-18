@@ -289,5 +289,10 @@ john --format=zip --wordlist=passwords.txt ziphash
 #PYTHON shell
 python -c 'import pty; pty.spawn("/bin/bash")'
 
+##################################ACTIVE DIRECTORY#################################
+# if you ever need to use the gui to seach AD without tools installed use this:
+%SystemRoot%\SYSTEM32\rundll32.exe dsquery,OpenQueryWindow
+
+
 
 
