@@ -21,8 +21,15 @@
 
 ####################
 # UPDATE KALI
-################
+###################
+## ok so you probably want to run two vms for the pwk and maybe the exam one pwk vanilla 32 bit which is not updated and one 2018 KALI with the latest updates
+
+
 apt-get update; apt-get upgrade
+
+
+#############START POSTGRESQL on BOOT####################
+sudo update-rc.d postgresql enable
 
 ##################################################
 # SETUP VM TOOLS FOR SHARED FOLDERS AND COPY PASTA
