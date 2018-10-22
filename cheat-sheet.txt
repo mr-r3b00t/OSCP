@@ -258,6 +258,9 @@ cmdkey /list
 #remote desktop with clipboard, screen name SLAVE and use 80% of the screen
 rdesktop -u administrator -p "Pa55w0rd1" -r PRIMARYCLIPBOARD -T SLAVE -g 80% 10.11.1.221
 
+#connect to the Windows 7 VM and mount the /tmp/ folder as a shared drive
+
+rdesktop -u offsec -p Pa55w0rd1 -r disk:Temp=/tmp/ -T PWK-W7 -g 80% 10.11.16.xx
 
 
 ######### LINUX POST EXPLOITATION ##############
