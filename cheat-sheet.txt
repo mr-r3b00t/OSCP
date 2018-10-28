@@ -317,6 +317,7 @@ john --format=zip --wordlist=passwords.txt ziphash
 # if you have a limited shell on linux try this:
 #PYTHON shell
 python -c 'import pty; pty.spawn("/bin/bash")'
+python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 ##################################ACTIVE DIRECTORY#################################
 # if you ever need to use the gui to seach AD without tools installed use this:
@@ -332,4 +333,15 @@ git clone https://github.com/trustedsec/ridenum
 # neeeds python-pexpect
 #may needs creds is NULL sessions isn't enabled
 python ridenum.py 10.11.1.220 500 50000
+
+
+
+
+######################WEB TOOLS TO HELP YOU ON THE JOURNEY########################
+#CYBER CHEF from GCHQ
+https://gchq.github.io/CyberChef/
+
+#The magic tool will analyse data and try and work out its format e.g. type/cat a zip file and copy it into the input
+https://gchq.github.io/CyberChef/#recipe=Magic(3,false,false)
+
 
