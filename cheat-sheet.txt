@@ -334,7 +334,8 @@ git clone https://github.com/trustedsec/ridenum
 #may needs creds is NULL sessions isn't enabled
 python ridenum.py 10.11.1.220 500 50000
 
-
+###DNS ENUMERATION
+dnsrecon -d thinc.local -n 10.11.1.xx -D /usr/share/wordlists/subdomains-10000.txt -t std,srv,axfr -c /pentest/oscp/dns.csv
 
 
 ######################WEB TOOLS TO HELP YOU ON THE JOURNEY########################
