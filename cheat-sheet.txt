@@ -84,6 +84,10 @@ db_status
 set GLHOST 10.10.10.10
 set GLPORT 4444
 
+############START POSTGRESQL on BOOT #############
+systemctl enable ssh
+systemctl enable postgresql
+
 #########################
 #SIMPLE PYTHON WEB SERVER
 ########################
