@@ -350,3 +350,7 @@ https://gchq.github.io/CyberChef/
 https://gchq.github.io/CyberChef/#recipe=Magic(3,false,false)
 
 
+####################### Running BURP Suite when the target has a certificate issue#########################
+#disable java SNI for when your target site doesn't appear in burp suite and its running TLS
+java -Djsse.enableSNIExtension=false -jar  burpsuite_community_v1.7.36.jar
+
