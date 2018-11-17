@@ -196,6 +196,13 @@ mknod /tmp/backpipe p
 
 #sweeeeet!
 
+#####################
+#GREP search file contents of a directory
+#############################################
+#search file contents using acase insensitive recusrive search
+grep -rniw /pentest/HTB/bank/balance-transfer/bank.htb/balance-transfer/ -e 'success'
+
+
 
 ##############################WEB SERVER LFI##############################
 
