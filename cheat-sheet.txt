@@ -384,3 +384,11 @@ https://gchq.github.io/CyberChef/#recipe=Magic(3,false,false)
 #disable java SNI for when your target site doesn't appear in burp suite and its running TLS
 java -Djsse.enableSNIExtension=false -jar  burpsuite_community_v1.7.36.jar
 
+
+#############LINUX TCP DUMP#################
+#DUMP CLIENT CONNECTION HTTP HEADERS
+#change the port to suite the server you are abusing
+tcpdump -A -s 0 'tcp dst port 10443 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
+
+
+
