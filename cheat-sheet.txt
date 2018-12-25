@@ -323,6 +323,13 @@ chmod +x LinEnum.sh
 #https://github.com/mzet-/linux-exploit-suggester
 
 
+################LINUX CAPABILITIES###################
+
+getcap -r / 2>/dev/null
+
+################################################
+
+
 
 ###################### KERNEL EXPLOITS ################################
 #Look at the suggested exploits in relation to kernerl exploits
