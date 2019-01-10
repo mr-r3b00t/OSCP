@@ -1,0 +1,5 @@
+#document all tasks in task scheduler
+$outcsv = "c:\temp\taskdef.csv" ; Get-ScheduledTask | ForEach-Object { [pscustomobject]@{ Name = $_.TaskName; Path = $_.TaskPath;LastResult = $(($_ | Get-ScheduledTaskInfo).LastTaskResult);NextRun = $(($_ | Get-ScheduledTaskInfo).NextRunTime);Status = $_.State;Command = $_.Actions.execute;Arguments = $_.Actions.Arguments }} |Export-Csv -Path $outcsv -NoTypeInformation -Force
+
+#dump all windows credential manager creds
+[void][Windows.Security.Credentials.PasswordVault,Windows.Security.Credentials,ContentType=WindowsRuntime];$vault = New-Object Windows.Security.Credentials.PasswordVault;$vault.RetrieveAll() | % { $_.RetrievePassword();$_ }
